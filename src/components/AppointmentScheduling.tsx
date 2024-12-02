@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Calendar, Clock, User, FileText } from 'lucide-react';
+import { Calendar, Clock, User, FileText, Check, X } from 'lucide-react';
 import axios from 'axios';
 import { format } from 'date-fns';
 import toast from 'react-hot-toast';
@@ -256,13 +256,13 @@ export function AppointmentScheduling() {
                             onClick={() => updateAppointmentStatus(appointment._id, 'completed')}
                             className="text-green-600 hover:text-green-900"
                           >
-                            Complete
+                            <Check className="h-5 w-5" />
                           </button>
                           <button
                             onClick={() => updateAppointmentStatus(appointment._id, 'cancelled')}
                             className="text-red-600 hover:text-red-900"
                           >
-                            Cancel
+                            <X className="h-5 w-5" />
                           </button>
                         </>
                       )}
